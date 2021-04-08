@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+FavoriteAnimal.destroy_all
+User.destroy_all
+Animal.destroy_all
+
+
+john = User.create(username: "john", password: "work")
+pam = User.create(username: "pam", password: "work")
+crystal = User.create(username: "crystal", password: "work")
+jose = User.create(username: "jose", password: "work")
+
+dog = Animal.create(name: "dog", image:"img", age:"2", breed:"bishon")
+cat = Animal.create(name: "cat", image:"img", age:"1", breed:"house")
+horse = Animal.create(name: "horse", image:"img", age:"9", breed:"wild")
+tiger = Animal.create(name: "tiger", image:"img", age:"2", breed:"bengal")
+
+first = FavoriteAnimal.create(user:john, animal: dog)
+second = FavoriteAnimal.create(user:john, animal:cat)
+third = FavoriteAnimal.create(user:john, animal:horse)
+fourth = FavoriteAnimal.create(user:john, animal:tiger)
