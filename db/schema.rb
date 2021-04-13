@@ -10,9 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_211511) do
+ActiveRecord::Schema.define(version: 2021_04_13_182846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  
+  create_table "animals", force: :cascade do |t|
+    t.string "type"
+    t.string "species"
+    t.string "breeds"
+    t.string "color"
+    t.string "age"
+    t.string "gender"
+    t.string "size"
+    t.string "environment"
+    t.string "tags"
+    t.string "name"
+    t.string "description"
+    t.string "photos"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favorite_animals", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "animal_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["animal_id"], name: "index_favorite_animals_on_animal_id"
+    t.index ["user_id"], name: "index_favorite_animals_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "favorite_animals", "animals"
+  add_foreign_key "favorite_animals", "users"
+end
