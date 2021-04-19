@@ -1,6 +1,12 @@
 
-FavoriteAnimal.destroy_all
-User.destroy_all
+# FavoriteAnimal.destroy_all
+# User.destroy_all
 Animal.destroy_all
 
 
+animal1 = Animal.create(group:"dog", species:"dog", breeds:"poodle", color:"white", age:"young", gender:"male", size:"medium", environment:"good with kids", tags:"upbeat", name:"tommy", description:"really fun dog to have", photos:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnXO9Co5lZVbJwM5wYcba4l1IGPD8Ie4pPKf28GALEKALgdQb4DoBcnkpuJzRjZA2HJg&usqp=CAU", status:"available")
+animal2 = Animal.create(group:"dog", species:"dog", breeds:"wolf", color:"white", age:"young", gender:"male", size:"medium", environment:"good with kids", tags:"upbeat", name:"carl", description:"really fun dog to have", photos:"https://www.loveyourdog.com/wp-content/uploads/2019/08/White-Dog-Breeds-With-Fluffy-Fur-900x500.jpg", status:"available")
+animal3 = Animal.create(group:"dog", species:"dog", breeds:"poodle", color:"white", age:"young", gender:"male", size:"medium", environment:"good with kids", tags:"barks", name:"tim", description:"really fun dog to have", photos:"https://vetstreet-brightspot.s3.amazonaws.com/9d/b6/4594ad684c7bae3bebd2a5a0f9f5/white-dog-thinkstockphotos-177514586-590sm6415.jpg", status:"available")
+animal4 = Animal.create(group:"cat", species:"cat", breeds:"house", color:"white", age:"old", gender:"female", size:"small", environment:"good with kids", tags:"lazy", name:"louie", description:"really fun cat to have", photos:"https://www.thesprucepets.com/thmb/gj5LXtuEXDbrd3MMxCFVbEraDnU=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/33351631_260594934684461_1144904437047754752_n-5b17d77604d1cf0037f3ea5a.jpg", status:"available")
+animal5 = Animal.create(group:"cat", species:"cat", breeds:"house", color:"white", age:"adult", gender:"male", size:"large", environment:"bad with kids", tags:"lazy", name:"trott", description:"really fun cat to have", photos:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnXO9Co5lZVbJwM5wYcba4l1IGPD8Ie4pPKf28GALEKALgdQb4DoBcnkpuJzRjZA2HJg&usqp=CAU", status:"available")
+animal6 = Animal.create(group:"cat", species:"cat", breeds:"house", color:"white", age:"young", gender:"male", size:"medium", environment:"bad with kids", tags:"lazy", name:"harry", description:"really fun dog to have", photos:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnXO9Co5lZVbJwM5wYcba4l1IGPD8Ie4pPKf28GALEKALgdQb4DoBcnkpuJzRjZA2HJg&usqp=CAU", status:"available")
