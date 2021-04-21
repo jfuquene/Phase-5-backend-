@@ -15,7 +15,7 @@ class FavoriteAnimalsController < ApplicationController
         @favoriteanimal = FavoriteAnimal.new(favoriteanimal_params)
     
         if @favoriteanimal.save
-          render json: @favoriteanimal, status: :created, location: @favoriteanimal
+          render json: @favoriteanimal, status: :created 
         else
           render json: @favoriteanimal.errors, status: :unprocessable_entity
         end
@@ -43,8 +43,8 @@ class FavoriteAnimalsController < ApplicationController
     
         # Only allow a list of trusted parameters through.
         def favoriteanimal_params
-          params.require(:favoriteanimal).permit(:user_id, :animal_id)
+          params.require(:favorite_animal).permit(:user_id, :animal_id)
         end
     end
     
-end
+
