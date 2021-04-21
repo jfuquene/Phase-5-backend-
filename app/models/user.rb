@@ -4,7 +4,7 @@ class User < ApplicationRecord
    has_many :animals, through: :favorite_animals
     
    
-   validates :username, presence: true
+    validates :username, presence: true
     validates :username, uniqueness: true
     validates :username, length: { minimum: 4 }
     validates :email, presence: true
